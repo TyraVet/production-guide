@@ -25,17 +25,17 @@ way we have our static website and also the API on another port in the same
 machine. So before anything install Nginx in your system.
 
 ### 1. Set your static website files
-1.1 Setup and Build [TyraWeb VueJS Application](https://github.com/tyra-web/tyra-web).
-1.2 Create directory ```/var/www/yourdomain.com```.
-1.3 Move the static website files from the build into that folder.
+- 1.1 Setup and Build [TyraWeb VueJS Application](https://github.com/tyra-web/tyra-web).
+- 1.2 Create directory ```/var/www/yourdomain.com```.
+- 1.3 Move the static website files from the build into that folder.
 
 ### 2. Set API
-2.1 Setup and Run [TyraWeb NodeJS/Express API](https://github.com/tyra-web/tyra-web-api).
+- 2.1 Setup and Run [TyraWeb NodeJS/Express API](https://github.com/tyra-web/tyra-web-api).
 
 ### 3. Create SSL Certificate
 You can follow up this [tutorial](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04).
 
-### 4. Create ```/etc/nginx/sties-available/yourdoamin.com```
+### 4. Create ```/etc/nginx/sties-available/yourdomain.com```
 ``` sh
 server {
     listen 443 default_server;
