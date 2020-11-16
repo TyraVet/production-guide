@@ -35,7 +35,8 @@ machine. So before anything install Nginx in your system.
 ### 3. Create SSL Certificate
 You can follow up this [tutorial](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04).
 
-### 4. Create ```/etc/nginx/sties-available/yourdomain.com```
+### 4. Config Nginx
+- 4.1 Create ```/etc/nginx/sties-available/yourdomain.com```
 ``` sh
 server {
     listen 443 default_server;
@@ -72,6 +73,10 @@ server {
     server_name yourdomain.com;
     rewrite ^ https://$host$request_uri? permanent;
 }
+```
+- 4.2 Create symbolic link in the ```./sites-enabled``` directory.
+``` sh
+ln -s /etc/nginx/sites-available/yourdomain.com /etc/nginx/sites-enabled/
 ```
 
 ## Contributing
